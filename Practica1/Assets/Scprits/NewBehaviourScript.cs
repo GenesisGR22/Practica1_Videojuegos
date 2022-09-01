@@ -6,6 +6,8 @@ public class NewBehaviourScript : MonoBehaviour
 {
     // Start is called before the first frame update
     public float jumpForce = 10;
+    public float xInicial, yInicial;
+
 
     private SpriteRenderer sr;
     private Rigidbody2D rb;
@@ -17,6 +19,7 @@ public class NewBehaviourScript : MonoBehaviour
     private const int ANIMATION_ATTACK = 3;
     private const int ANIMATION_JUMP = 4;
     private const int ANIMATION_DEAD = 5;
+    private int numSalto = 0;
 
     void Start()
     {
@@ -57,10 +60,11 @@ public class NewBehaviourScript : MonoBehaviour
             sr.flipX = true;
         }
 
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Space) && numSalto < 2)
         {
             rb.AddForce( new Vector2(rb.velocity.x, 30f),ForceMode2D.Impulse);
             anim.SetInteger("Estado", ANIMATION_JUMP);
+            numSalto++;
         }
         
         if (Input.GetKeyUp("z"))
@@ -70,6 +74,13 @@ public class NewBehaviourScript : MonoBehaviour
         if (Input.GetKeyUp("v"))
         {
             anim.SetInteger("Estado", ANIMATION_DEAD);
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            numSalto = 0;
         }
     }
 }
