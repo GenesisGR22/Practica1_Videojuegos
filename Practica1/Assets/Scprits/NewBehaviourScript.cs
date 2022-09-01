@@ -16,6 +16,7 @@ public class NewBehaviourScript : MonoBehaviour
     private const int ANIMATION_RUN = 2;
     private const int ANIMATION_ATTACK = 3;
     private const int ANIMATION_JUMP = 4;
+    private const int ANIMATION_DEAD = 5;
 
     void Start()
     {
@@ -65,6 +66,10 @@ public class NewBehaviourScript : MonoBehaviour
         if (Input.GetKeyUp("z"))
         {
             anim.SetInteger("Estado", ANIMATION_ATTACK);
+        }
+        if (Input.GetKeyUp("v"))
+        {
+            anim.SetInteger("Estado", ANIMATION_DEAD);
         }
     }
 }
