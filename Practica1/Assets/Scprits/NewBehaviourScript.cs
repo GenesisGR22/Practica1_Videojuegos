@@ -5,9 +5,12 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float jumpForce = 10;
-    public float xInicial, yInicial;
-
+    private float jumpForce = 10;
+    public GameObject InicioCartel;
+    public GameObject FinCartel;
+    private Vector3 startObj;
+    private Vector3 startObjInicio;
+    private Vector3 startObjFin;
 
     private SpriteRenderer sr;
     private Rigidbody2D rb;
@@ -26,6 +29,9 @@ public class NewBehaviourScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        //startObj = transform.position;
+        startObjInicio = InicioCartel.transform.position;
+        startObjFin = FinCartel.transform.position;
     }
 
     // Update is called once per frame
@@ -82,5 +88,24 @@ public class NewBehaviourScript : MonoBehaviour
         {
             numSalto = 0;
         }
+
+        if (collision.gameObject.CompareTag("Caida"))
+        {
+            transform.position = startObj ;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Inicio"))
+        {
+            startObj = startObjInicio;
+        }
+
+        if (collision.gameObject.CompareTag("Fin"))
+        {
+            startObj = startObjFin ;
+        }
+
     }
 }
+

@@ -133,9 +133,10 @@ GameObject:
   m_Component:
   - component: {fileID: 47210544}
   - component: {fileID: 47210543}
+  - component: {fileID: 47210545}
   m_Layer: 0
   m_Name: SignArrow
-  m_TagString: Untagged
+  m_TagString: Inicio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,13 +201,39 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47210542}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.435541, y: -0.9, z: 0}
+  m_LocalPosition: {x: -24.3, y: -0.9, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &47210545
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47210542}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.1184873, y: 0.077742875}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.84, y: 0.87}
+    newSize: {x: 0.84, y: 0.87}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6030253, y: 0.35332322}
+  m_EdgeRadius: 0
 --- !u!1 &101643258
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,9 +417,10 @@ GameObject:
   m_Component:
   - component: {fileID: 182984178}
   - component: {fileID: 182984177}
+  - component: {fileID: 182984179}
   m_Layer: 0
   m_Name: Sign
-  m_TagString: Untagged
+  m_TagString: Fin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -464,6 +492,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &182984179
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182984176}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.14032647}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.85, y: 0.88}
+    newSize: {x: 0.85, y: 0.88}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.85, y: 0.59934705}
+  m_EdgeRadius: 0
 --- !u!1 &187199037
 GameObject:
   m_ObjectHideFlags: 0
@@ -4152,8 +4206,8 @@ GameObject:
   - component: {fileID: 1204865345}
   - component: {fileID: 1204865344}
   m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
+  m_Name: CaidaMx
+  m_TagString: Caida
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4192,7 +4246,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1204865343}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -13.22, z: 0}
+  m_LocalPosition: {x: 0, y: -19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4966,6 +5020,14 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1531790445110191329, guid: 58436d3d20eba78408c6c3cdcc22d0f3, type: 3}
+      propertyPath: FinCartel
+      value: 
+      objectReference: {fileID: 182984176}
+    - target: {fileID: 1531790445110191329, guid: 58436d3d20eba78408c6c3cdcc22d0f3, type: 3}
+      propertyPath: InicioCartel
+      value: 
+      objectReference: {fileID: 47210542}
     - target: {fileID: 1531790445110191333, guid: 58436d3d20eba78408c6c3cdcc22d0f3, type: 3}
       propertyPath: m_SortingOrder
       value: 5
