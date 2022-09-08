@@ -167,4 +167,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26fbee67bb572524a946e9509592d10b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 1
+  Bala: {fileID: 6734761278077978506, guid: f44336657ca9c2e4487e91450658e105, type: 3}

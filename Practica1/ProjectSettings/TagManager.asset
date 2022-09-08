@@ -8,6 +8,7 @@ TagManager:
   - Caida
   - Inicio
   - Fin
+  - Enemigo
   layers:
   - Default
   - TransparentFX
